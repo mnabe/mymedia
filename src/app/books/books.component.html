@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Books</h1>
+
+<p *ngIf="!books"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+  <thead>
+    <tr>
+      <th>English Title</th>
+      <th>Danish Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.englishTitle }}</td>
+      <td>{{ book.danishTitle }}</td>
+    </tr>
+  </tbody>
+</table>

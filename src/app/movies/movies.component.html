@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Movies</h1>
+
+<p *ngIf="!movies"><em>Loading...</em></p>
+
+<table class="table table-striped" aria-labelledby="tableLabel" *ngIf="movies">
+  <thead>
+    <tr>
+      <th>English Title</th>
+      <th>Danish Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.englishTitle }}</td>
+      <td>{{ movie.danishTitle }}</td>
+    </tr>
+  </tbody>
+</table>
