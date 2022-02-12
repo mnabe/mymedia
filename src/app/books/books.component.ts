@@ -6,15 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  books = [
+  title = "Books";
+  books: Book[] = [
     {
-      englishTitle: 'Hej',
-      danishTitle: 'Hej',
-    },
+      id: 1,
+      title: 'Book title'
+    }
   ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
+}
+
+interface Book {
+  id: number;
+  title: string
 }
