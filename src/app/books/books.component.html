@@ -1,8 +1,6 @@
-<h1 id="tableLabel">Books</h1>
+<h1>Books</h1>
 
-<p *ngIf="!books"><em>Loading...</em></p>
-
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+<table *ngIf="books">
   <thead>
     <tr>
       <th>English Title</th>
