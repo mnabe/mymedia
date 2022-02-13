@@ -1,16 +1,7 @@
 <h1>{{title}}</h1>
 
-<table *ngIf="movies">
-  <thead>
-    <tr>
-      <th>English Title</th>
-      <th>Danish Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let movie of movies">
-      <td>{{ movie.englishTitle }}</td>
-      <td>{{ movie.danishTitle }}</td>
-    </tr>
-  </tbody>
-</table>
+<ul *ngIf="movies">
+  <li *ngFor="let movie of movies">
+    <span>{{movie.id}}</span> {{movie.title}}
+  </li>
+</ul>

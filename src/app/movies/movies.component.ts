@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { mockMovies } from './mock-movies';
 
 @Component({
   selector: 'app-movies',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
   title = "Movies";
-  movies = [
-    {
-      englishTitle: 'Hej',
-      danishTitle: 'Hej',
-    },
-  ];
+  movies = mockMovies;
   constructor() { }
 
   ngOnInit(): void {
   }
+}
+
+export interface Movie {
+  id: number,
+  title: string
 }
