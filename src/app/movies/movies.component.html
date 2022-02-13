@@ -1,7 +1,13 @@
 <h1>{{title}}</h1>
 
+<!--Movies section-->
 <ul *ngIf="movies">
   <li *ngFor="let movie of movies">
-    <span>{{movie.id}}</span> {{movie.title}}
+    <button type="button" (click)="onSelect(movie)">
+      <span>{{movie.id}}</span> {{movie.title}}
+    </button>
   </li>
 </ul>
+
+<!--Selected movie details-->
+<h3 *ngIf="selectedMovie">{{ selectedMovie.title }}</h3>

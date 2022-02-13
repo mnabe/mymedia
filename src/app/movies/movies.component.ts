@@ -13,6 +13,10 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  selectedMovie?: Movie;
+  onSelect(movie: Movie){
+    this.selectedMovie = movie;
+  }
 }
 
 export interface Movie {
